@@ -18,6 +18,6 @@ fc-cache -fv
 curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir /usr/local/bin -y
 
 # Copy dotfiles to home directory
-cp /home/$USER/dotfiles/.bashrc /home/$USER/.bashrc
-cp /home/$USER/dotfiles/.gitconfig /home/$USER/.gitconfig
-cp /home/$USER/dotfiles/starship.toml /home/$USER/.config/starship.toml
+sudo cp .bashrc /home/$USER/.bashrc
+sudo cp .gitconfig /home/$USER/.gitconfig
+sudo cp starship.toml /home/$USER/.config/starship.toml
