@@ -4,6 +4,7 @@ sudo apt-get update
 sudo apt-get install zip -y
 sudo apt-get install unzip -y
 sudo apt-get install fontconfig -y
+sudp apt-get install stow -y
 
 # Install nerd font
 curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip > /tmp/JetBrainsMono.zip
@@ -21,3 +22,7 @@ curl -sS https://starship.rs/install.sh | sh -s -- --bin-dir /usr/local/bin -y
 cp ./.bashrc ~/.bashrc
 cp ./starship.toml ~/.config/starship.toml
 cp ./.gitconfig ~/.gitconfig
+
+# Sync dotfiles to home directory
+echo "Syncing dotfiles..."
+stow . --dir=/home/$USER/dotfiles --target=/home/$USER
